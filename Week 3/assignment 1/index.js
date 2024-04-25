@@ -11,7 +11,7 @@ async function fetchFromURLs(url, method, body) {
             }
         }
         );
-        console.log("fetched");
+        // console.log("fetched");
         const data = await response.json();
         return data;
     } catch (err) {
@@ -34,8 +34,8 @@ fetchButton.addEventListener('click', () => {
     const methodValue = method.value;
     let bodyValue;
     if (methodValue !== 'GET') {
-        console.log(body, "object");
-        console.log(body.value);
+        // console.log(body, "object");
+        // console.log(body.value);
         bodyValue = JSON.parse(body.value);
     //     '{
     //     "id": 1, "title": "foo", "body": "bar", "userId": "1"
