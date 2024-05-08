@@ -1,0 +1,32 @@
+{
+  "name": "week-5-be",
+  "version": "1.0.0",
+  "description": "A basic Node.js endpoint that handles a GET request to fetch an array of product details",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jojo-GitH2/Youthrive-Access-Projects.git#main"
+  },
+  "keywords": [
+    "Express",
+    "Node"
+  ],
+  "author": "Jonah Uka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jojo-GitH2/Youthrive-Access-Projects/issues"
+  },
+  "homepage": "https://github.com/Jojo-GitH2/Youthrive-Access-Projects/tree/main#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
