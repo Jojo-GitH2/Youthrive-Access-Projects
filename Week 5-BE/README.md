@@ -32,3 +32,42 @@ Nodemon simplifies this process. When you start your application with Nodemon (u
 
 To use Nodemon, you first need to install it. This is typically done globally (for your whole system) with the command `npm install -g nodemon`. After that, you can start your application with `nodemon` instead of `node`, like so: `nodemon server.js`.
 
+## 4. A basic Node.js endpoint that handles a GET request to fetch an array of product details
+A snippet of a basic Node.js endpoint that handles a GET request to fetch an array of product details using Express:
+
+```javascript
+app.get("/products", (req, res) => {
+  res.json(products);
+});
+
+app.get("/products/:name", (req, res) => {
+  const product = products.products.find(
+    (product) => product.name === req.params.name.toLowerCase()
+  );
+  if (!product) {
+    res
+      .status(404)
+      .send(
+        `<em>${req.params.name}</em> is not available, kindly check the name again.`
+      );
+  } else {
+    res.json(product);
+  }
+});
+```
+## 5. A Node.js endpoint to handle a POST request for adding a new product to an existing array of products
+
+```javascript
+app.post("/products", (req, res) => {
+  const product = req.body;
+  const id = products.products.at(-1).productId + 1;
+  let newProduct = {
+    productId: id,
+    ...product,
+  };
+
+  products.products.push(newProduct);
+  res.json(products);
+});
+```
+> Full code at [index.js](index.js)
