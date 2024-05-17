@@ -52,4 +52,9 @@ router.delete('/:name', async (req, res) => {
     res.send(deletedProduct);
 });
 
+router.delete('/', async (req, res) => {
+    const deletedProducts = await Product.deleteMany();
+    res.send(deletedProducts);
+});
+
 module.exports = router;
