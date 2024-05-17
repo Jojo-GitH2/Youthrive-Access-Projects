@@ -1,0 +1,1 @@
+MONGODB_URI=mongodb+srv://jonahuka:<password>@productinventory.mxog2kk.mongodb.net/?retryWrites=true&w=majority&appName=productInventory
